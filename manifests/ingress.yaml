@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+  namespace: bits-demo
+spec:
+  backend:
+    serviceName: hello
+    servicePort: 8080
