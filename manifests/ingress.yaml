@@ -1,9 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: test-ingress
+  name: hello-world
   namespace: bits-demo
 spec:
-  backend:
-    serviceName: hello
-    servicePort: 8080
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: hello-world
+              servicePort: 80
